@@ -1,0 +1,91 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #000;
+    font-family: 'Bebas Neue', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: 5;
+}
+
+.video-container {
+    position: relative;
+    width: 90%;
+    height: 85vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+#bgVideo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    filter: brightness(0.4);
+}
+
+#lyric-display {
+    position: absolute;
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    width: 80%;
+    text-shadow: 0 0 20px rgba(0,0,0,1);
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* HEAVY RAIN LAYER */
+#rainCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20; /* Sits on top of the video and lyrics */
+    pointer-events: none;
+}
+
+#falling-memes-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100; /* Images fall in front of the rain */
+    pointer-events: none;
+}
+
+.falling-meme {
+    position: absolute;
+    pointer-events: none;
+}
+
+#overlay {
+    position: fixed;
+    inset: 0;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+    cursor: pointer;
+    font-size: 2rem;
+    letter-spacing: 4px;
+}
